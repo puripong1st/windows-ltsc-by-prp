@@ -1,0 +1,5 @@
+Windows Registry Editor Version 5.00
+
+[Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler]
+"EnablePreemption"=dword:00000000
+"VsyncIdleTimeout"=dword:00000000

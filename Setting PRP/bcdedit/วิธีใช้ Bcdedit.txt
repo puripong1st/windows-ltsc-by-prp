@@ -1,0 +1,3 @@
+กดรัน แอดมิน bcdedit.bat 
+และเข้าไปตั้งค่าใน msconfig ไปที่ Boot กดไปที่ Advanced options
+กดติ้ก Number of processors และเลือกเลขมากที่สุด

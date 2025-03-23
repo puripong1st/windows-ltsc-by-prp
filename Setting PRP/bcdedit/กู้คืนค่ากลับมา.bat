@@ -1,0 +1,1 @@
+bcdedit /import C:\bcd_backup

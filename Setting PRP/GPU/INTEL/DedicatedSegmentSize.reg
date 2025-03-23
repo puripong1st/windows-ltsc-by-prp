@@ -1,0 +1,4 @@
+Windows Registry Editor Version 5.00
+
+[HKLM\SOFTWARE\Intel\GMM]
+"DedicatedSegmentSize"=dword:400

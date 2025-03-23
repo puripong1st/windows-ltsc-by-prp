@@ -1,0 +1,30 @@
+2.Sync 
+ignore if use ****
+ ****GSYNC - Off , Force Off , Disallow
+
+ Maximum Pre-Rendered Frames - 0 & 1
+ Low Latency Mode - Ultra
+
+ Prefered Refreshrate - Highest
+
+ VSYNC - Off & Force Off & Standard
+
+4.Texture
+ Optimization - On
+ Quality - High Performance
+ LOD Bias (DX) - (+ more fps & worse visuals)
+
+5.Common
+ Ambient Usage - Disabled
+ CUDA - Force P2 State - Off
+ Power Management - Maximum
+ rBAR Feature - Enabled
+ rBAR Options - 1
+ rBAR Size Limit - 400000
+ Threaded Optimizaiotn - Auto
+
+
+8.Extra
+ Memory Allocation Policy - Moderate_Pre or Aggressive
+
+ Variable refresh Rate - Disable or enable if use gsync & freesync
