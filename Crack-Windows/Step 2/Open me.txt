@@ -1,0 +1,62 @@
+ขั้นตอนที่ 1: เปิด "Run as admin.cmd" ในฐานะผู้ดูแลระบบ 
+
+-> ให้ไฟล์ cmd ดำเนินการ 
+-> หากหน้าจอไฟล์ cmd ค้าง ให้แตะที่บริเวณในไฟล์ cmd จากนั้นกด Enter แล้วรอ!
+
+ขั้นตอนที่ 2: เฉพาะเมื่อคุณพบข้อผิดพลาดเท่านั้น 
+
+ข้อผิดพลาด: 0xC004F074 บริการอนุญาตสิทธิ์ซอฟต์แวร์รายงานว่าไม่สามารถเปิดใช้งานคอมพิวเตอร์ได้ 
+
+ไม่สามารถติดต่อบริการการจัดการคีย์ (KMS) ได้ โปรดดูบันทึกเหตุการณ์แอปพลิเคชันสำหรับข้อมูลเพิ่มเติม
+
+คุณต้องสลับไปใช้เซิร์ฟเวอร์ kms อื่นเพื่อแก้ไขข้อผิดพลาดนี้ 
+
+จะสลับเซิร์ฟเวอร์ kms ได้อย่างไร 
+
+ขั้นตอนที่ 1: คลิกขวาที่ "Run as admin.cmd" แล้วแก้ไข
+ขั้นตอนที่ 2: ค้นหา kms9.msguides.com
+ขั้นตอนที่ 3: แทนที่ด้วยเซิร์ฟเวอร์ใดๆ ที่ให้มา 
+
+ขั้นตอนที่ 4: บันทึกไฟล์และเปิดเป็นผู้ดูแลระบบ
+
+นี่คือรายชื่อเซิร์ฟเวอร์ kms บางส่วน
+
+-> kms8.msguides.com
+-> kms7.msguides.com
+-> s8.uk.to
+-> kms7.msguides.com
+-> kms.teevee.asia
+
+หมายเหตุ: หากเซิร์ฟเวอร์ที่ระบุไว้ไม่ทำงาน คุณต้องค้นหาเซิร์ฟเวอร์ kms ที่ใช้งานได้บน Google
+---
+Step 1: Open the "Run as admin.cmd" as administrator. 
+
+-> Let the cmd file execute. 
+-> If the screen of cmd file semms to stuck, then tap on the area inisde the cmd file then press enter and WAIT!
+
+
+
+
+Step 2: Only when you get error. 
+
+Error: 0xC004F074 The Software Licensing Service reported that the computer could not be activated. 
+No Key Management Service (KMS) could be contacted. Please see the Application Event Log for additional information.
+
+You need to switch with another kms server to solve this error. 
+
+How to switch kms server? 
+Step 1: Right click the "Run as admin.cmd" and edit.
+Step 2: Find kms9.msguides.com
+Step 3: Replace it by any of the given servers. 
+Step 4: Save the file and open it as admin.
+
+
+Here are list of some kms servers.
+
+-> kms8.msguides.com
+-> kms7.msguides.com
+-> s8.uk.to
+-> kms7.msguides.com
+-> kms.teevee.asia
+
+Note: If any of the given servers doesn't work then you need to google for working kms servers.

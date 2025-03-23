@@ -1,0 +1,5 @@
+คัดลอกและวางโฟลเดอร์ "csvlk-pack" และ "EnterpriseS" ใน C:\Windows\System32\spp\tokens\skus 
+จากนั้นปิดหน้าต่างทั้งหมดแล้วไปที่ขั้นตอนที่ 2
+--
+Copy and paste "csvlk-pack" and "EnterpriseS" folder in C:\Windows\System32\spp\tokens\skus 
+Then close all windows and move to Step 2.

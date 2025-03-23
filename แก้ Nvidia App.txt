@@ -1,0 +1,4 @@
+แก้ Nvidia App เข้าไม่ได้
+โหลดโปรแกรม WPD.EXE
+ไปที่หน้า Privacy
+เปิด Services Windows Push Notifications User Service

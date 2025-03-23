@@ -1,0 +1,18 @@
+คนไทยอธิบาย
+https://youtu.be/1KSOsgpTxS4?si=QhXmG7HgCiLsicGZ
+https://www.youtube.com/watch?v=-_AJVcSMyVY
+ผลการวัด
+https://youtu.be/I2KNDZyzQF0?si=LxOiK7n3q_BhpfzO
+ดาวโหลด
+Windows 10
+https://www.microsoft.com/en-us/evalcenter/download-windows-10-enterprise
+โหลดของ ISO – Enterprise LTSC downloads 64-bit edition
+Windows 11 
+https://www.microsoft.com/en-us/evalcenter/download-windows-11-iot-enterprise-ltsc-eval
+โหลดของ ISO - Windows 11 IoT Enterprise LTSC 2024 Evaluation x64 or AMD64 edition
+วิธีการติดตั้ง
+https://youtu.be/DGHV69pGYf4?si=DEtcbwBtCOJljFNR
+ตั้งค่า Rufus ตามเขา หรือ ตาม bios ได้เลย
+โปรแกรมที่แนะนำให้โหลด
+https://www.malwarebytes.com/ 
+https://brave.com/
