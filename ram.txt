@@ -1,0 +1,71 @@
+:Superfetch
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\memory management\prefetchparameters" /v "EnableSuperfetch" /t REG_DWORD /d "0" /f 
+ปิดบริการ Superfetch
+EnableSuperfetch = 0: ปิดคุณสมบัติ Superfetch ซึ่งเป็นบริการที่โหลดแอปพลิเคชันที่ใช้บ่อยไว้ใน RAM ล่วงหน้า
+ผลกระทบ: ลดการใช้ RAM จากบริการพื้นหลัง แต่การเปิดแอปพลิเคชันครั้งแรกอาจช้าลง
+
+:memski
+PowerShell -Command "Disable-MMAgent -MemoryCompression"
+ปิด Memory Compression
+Disable-MMAgent -MemoryCompression: ปิดการบีบอัดหน่วยความจำ (ลดการใช้ CPU เพื่อประมวลผลการบีบอัด)
+ผลกระทบ: เพิ่มปริมาณ RAM ที่ใช้งานได้ทันที แต่การใช้ RAM โดยรวมอาจสูงขึ้น
+
+:memsk
+PowerShell -Command "Disable-MMAgent -PageCombining"
+ปิด Page Combining
+Disable-MMAgent -PageCombining: ปิดการรวมหน้าหน่วยความจำที่ซ้ำกัน
+ผลกระทบ: ลดการทำงานของ CPU แต่ใช้ RAM มากขึ้น
+
+:preftch
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters" /v "EnablePrefetcher" /t REG_DWORD /d "0" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters" /v "EnableSuperfetch" /t REG_DWORD /d "0" /f
+ปิด Prefetcher และ Superfetch
+EnablePrefetcher = 0 และ EnableSuperfetch = 0: ปิดการโหลดข้อมูลล่วงหน้าทั้งสองบริการ
+ผลกระทบ: ประหยัด RAM และลดการอ่านดิสก์ แต่ประสิทธิภาพการเปิดแอปพลิเคชันครั้งแรกลดลง
+
+:svc
+for /f "skip=1" %%i in ('wmic os get TotalVisibleMemorySize') do if not defined TOTAL_MEMORY set "TOTAL_MEMORY=%%i" & set /a SVCHOST=%%i+1024000
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "!SVCHOST!" /f 
+ปรับเกณฑ์หน่วยความจำสำหรับบริการระบบ (svchost)
+คำนวณ TotalVisibleMemorySize (RAM ทั้งหมด) แล้วตั้งค่า SvcHostSplitThresholdInKB เป็น RAM + 1 GB
+วัตถุประสงค์: เพิ่มขีดจำกัดหน่วยความจำสำหรับบริการระบบ เพื่อป้องกันการขัดข้องเนื่องจาก RAM เต็ม
+
+:reged
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "LargeSystemCache" /t REG_DWORD /d "1" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "ClearPageFileAtShutdown" /t REG_DWORD /d "0" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "DisablePagingExecutive" /t REG_DWORD /d "1" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "LargeSystemCache" /t REG_DWORD /d "0" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "NonPagedPoolQuota" /t REG_DWORD /d "0" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "NonPagedPoolSize" /t REG_DWORD /d "0" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "PagedPoolQuota" /t REG_DWORD /d "0" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "PagedPoolSize" /t REG_DWORD /d "192" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "SecondLevelDataCache" /t REG_DWORD /d "1024" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "SessionPoolSize" /t REG_DWORD /d "192" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "SessionViewSize" /t REG_DWORD /d "192" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "SystemPages" /t REG_DWORD /d "4294967295" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "PhysicalAddressExtension" /t REG_DWORD /d "1" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "ClearPageFileAtShutdown" /t REG_DWORD /d "0" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "DisablePagingExecutive" /t REG_DWORD /d "1" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "LargeSystemCache" /t REG_DWORD /d "0" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "NonPagedPoolQuota" /t REG_DWORD /d "0" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "NonPagedPoolSize" /t REG_DWORD /d "0" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "PagedPoolQuota" /t REG_DWORD /d "0" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "PagedPoolSize" /t REG_DWORD /d "192" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "SecondLevelDataCache" /t REG_DWORD /d "1024" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "SessionPoolSize" /t REG_DWORD /d "192" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "SessionViewSize" /t REG_DWORD /d "192" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "SystemPages" /t REG_DWORD /d "4294967295" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "PhysicalAddressExtension" /t REG_DWORD /d "1" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "FeatureSettings" /t REG_DWORD /d "1" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "FeatureSettingsOverride" /t REG_DWORD /d "3" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "FeatureSettingsOverrideMask" /t REG_DWORD /d "3" /f
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "PoolUsageMaximum" /t REG_DWORD /d "96" /f
+ปรับแต่งรีจิสทรีเพื่อเพิ่มประสิทธิภาพการจัดการ RAM
+ตั้งค่าหลัก:
+LargeSystemCache = 0: ปิดการใช้งานแคชระบบขนาดใหญ่ (เหมาะสำหรับเครื่องเซิร์ฟเวอร์)
+DisablePagingExecutive = 1: บังคับให้ไดรเวอร์และระบบปฏิบัติการอยู่ใน RAM ตลอดเวลา (ไม่สลับไปยังไฟล์เพจ)
+ClearPageFileAtShutdown = 0: ไม่ล้างไฟล์เพจเมื่อปิดเครื่อง (เพิ่มความเร็วการปิดระบบ)
+SecondLevelDataCache = 1024: ตั้งค่าแคช L2 ของ CPU เป็น 1 MB (ปรับให้ตรงกับฮาร์ดแวร์จริง)
+SystemPages = 4294967295: อนุญาตให้ระบบใช้หน้าเพจได้ไม่จำกัด
+PhysicalAddressExtension = 1: เปิดใช้ PAE (รองรับ RAM มากกว่า 4 GB บนระบบ 32 บิต)
+PoolUsageMaximum = 96: จำกัดการใช้พูลหน่วยความจำสูงสุดที่ 96% เพื่อป้องกันการเต็ม RAM
