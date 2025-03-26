@@ -1,0 +1,1 @@
+reg add "HKCU\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /v "C:\Program Files\Rockstar Games\GTA V\GTA5.exe" /t REG_SZ /d "~ DISABLEDXMAXIMIZEDWINDOWEDMODE DISABLEDXFULLSCREENOPTIMIZATIONS" /f
