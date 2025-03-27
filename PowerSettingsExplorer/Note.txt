@@ -1,0 +1,6 @@
+สามารถเปลี่ยนเลข scheme="e9a42b02-d5df-448d-aa00-03f14749eb61" เป็นค่า Powerplan ของตัวเองได้
+วิธีเช็คเลขค่า powerplan เปิด cmd พิมพ์ powercfg /list
+ก็จะเลขพวก Power Scheme GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c  (High performance)
+Power Scheme GUID: e9a42b02-d5df-448d-aa00-03f14749eb61  (Ultimate Performance) *
+เอาหลัง GUID : แทนเข้าไป
+ต้นฉบับ https://youtu.be/y0iyPZdUJo4?si=iRbz3iZ-jEJ0eLds&t=245
