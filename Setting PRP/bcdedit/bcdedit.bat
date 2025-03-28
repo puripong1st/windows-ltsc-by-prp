@@ -1,3 +1,4 @@
+cd C:\Windows\system32
 bcdedit /export C:\bcd_backup
 
 bcdedit / deletevalue useplatformclock
@@ -16,3 +17,14 @@ bcdedit /set allowedinmemorysettings 0x0
 bcdedit /set isolatedcontext No
 bcdedit /set vsmlaunchtype Off
 bcdedit /set vm No
+bcdedit /set disableelamdrivers Yes
+bcdedit /set pae ForceEnable
+bcdedit /set nx optout
+bcdedit /set highestmode Yes
+bcdedit /set forcefipscrypto No
+bcdedit /set noumex Yes
+bcdedit /set uselegacyapicmode No
+bcdedit /set ems No
+bcdedit /set extendedinput Yes
+bcdedit /set debug No
+bcdedit /set hypervisorlaunchtype Off
