@@ -4,3 +4,4 @@
 Power Scheme GUID: e9a42b02-d5df-448d-aa00-03f14749eb61  (Ultimate Performance) *
 เอาหลัง GUID : แทนเข้าไป
 ต้นฉบับ https://youtu.be/y0iyPZdUJo4?si=iRbz3iZ-jEJ0eLds&t=245
+ถ้าจะให้ speed มากกว่า base speed ใน Task คือการปรับ Processor performance boost mode เป็น Aggressive
