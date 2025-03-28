@@ -1,1 +1,7 @@
+ใช้คำสั่ง powercfg นำเข้าไฟล์ .pow:
+
+สมมติว่าไฟล์ .pow อยู่ที่ตำแหน่ง C:\powerplan.pow
+
+พิมพ์คำสั่ง:
+powercfg -import "C:\powerplan.pow"
 https://www.youtube.com/watch?v=pM40pmGtqYk
