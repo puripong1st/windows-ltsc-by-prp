@@ -1,7 +1,7 @@
 cd C:\Windows\system32
 bcdedit /export C:\bcd_backup
 
-bcdedit / deletevalue useplatformclock
+bcdedit /deletevalue useplatformclock
 bcdedit /deletevalue disabledynamictick
 bcdedit /set useplatformtick Yes
 bcdedit /set tscsyncpolicy Enhanced
